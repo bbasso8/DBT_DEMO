@@ -9,7 +9,6 @@ WITH daily_weather AS (
     FROM
     {{source('demo','weather')}}
 
-    LIMIT 10
 ),
 
 daily_weather_agg as (
