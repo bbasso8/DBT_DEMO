@@ -6,7 +6,7 @@ SELECT
     {{ get_season('STARTED_AT') }} AS SEASON_OF_YEAR,
     {{ day_type('STARTED_AT')}} AS DAY_TYPE
     FROM
-    {{ source('demo', 'bike') }}
+{{ ref('stg_bike') }}
     where STARTED_AT != 'started_at'
 )
 
